@@ -8,3 +8,4 @@
 2,Which word matches the image?,leopard,tiger,lion,leopard
 3,Which word matches the image?,lion,cheetah,lion,leopard
 1,which word matches the image?,elephant,bear,lion,elephant
+1,which word matches the image?,elephant,bear,lion,elephant

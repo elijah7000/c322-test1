@@ -3,6 +3,7 @@ package edu.iu.c322.test1.repository;
 import edu.iu.c322.test1.model.Question;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -70,7 +71,7 @@ public class FileRepository {
         return null;
     }
 
-    public boolean updateImage(int id, MultipartFile file) throws IOException {
+    public boolean updateImage(@PathVariable int id, MultipartFile file) throws IOException {
         System.out.println(file.getOriginalFilename());
         System.out.println(file.getContentType());
 
@@ -82,7 +83,7 @@ public class FileRepository {
         return true;
     }
 
-    public byte[] getImage(int id) throws IOException {
+    public byte[] getImage(@PathVariable int id) throws IOException {
         String fileExtension = ".png";
         Path path = Paths.get(IMAGES_FOLDER_PATH
                 + id + fileExtension);
